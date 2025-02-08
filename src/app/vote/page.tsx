@@ -1,11 +1,11 @@
-import Header from "@/components/header/page";
-import Footer from "@/components/footer/page";
-import Section from "@/components/Section/page";
+import Header from "@/components/Header/page";
+import Footer from "@/components/Footer/page";
+import VoteSection from "@/components/VotePage/page";
 
 export default function VotePage() {
   return <div className="flex flex-wrap gap-4 items-center">
     <Header id="vote"/>
-    <Section id="votepage" />
+    <VoteSection />
     <Footer id="vote"/>
   </div>
 }
