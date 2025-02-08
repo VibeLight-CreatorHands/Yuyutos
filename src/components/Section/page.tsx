@@ -29,7 +29,6 @@ export default function Section({id}:{id:string}) {
   const [currentUser, setCurrentUser] = useState<User | null>(null);
   const [voteCounts, setVoteCounts] = useState({ pvp: 0, pve: 0 });
 
-  if (id == "votepage") {
   // ✅ ユーザー認証（Googleログイン） - useEffectでマウント時に一度だけ実行
   useEffect(() => {
     const loginButton = document.createElement("button");
@@ -55,7 +54,6 @@ export default function Section({id}:{id:string}) {
     };
 
   }, []); // 空の依存配列でマウント時のみ実行
-  }
 
   // ✅ 投票処理（PvP/PvE）
   const vote = async (type: string) => {
