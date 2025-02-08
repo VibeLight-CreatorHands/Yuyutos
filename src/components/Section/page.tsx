@@ -29,6 +29,7 @@ export default function Section({id}:{id:string}) {
   const [currentUser, setCurrentUser] = useState<User | null>(null);
   const [voteCounts, setVoteCounts] = useState({ pvp: 0, pve: 0 });
 
+  if (id == "votepage") {
   // ✅ ユーザー認証（Googleログイン） - useEffectでマウント時に一度だけ実行
   useEffect(() => {
     const loginButton = document.createElement("button");
@@ -54,7 +55,7 @@ export default function Section({id}:{id:string}) {
     };
 
   }, []); // 空の依存配列でマウント時のみ実行
-
+  }
 
   // ✅ 投票処理（PvP/PvE）
   const vote = async (type: string) => {
@@ -95,7 +96,7 @@ export default function Section({id}:{id:string}) {
 
   switch (id) {
     case "about":
-      return <section>
+      return <section id='about'>
       <h3>About Us</h3>
       <p>Welcome to NewDimWorlds, the ultimate Minecraft streaming server! Join us for thrilling adventures, epic builds, and much more.</p>
       <Button content="詳細を見る" onClick={() => toggleBubble("aboutBubble")} />
@@ -140,7 +141,7 @@ case "votepage":
     </section>
   );
       default:
-        return <section id="about">
+        return <section id="null">
         <h3>Null Section Id</h3>
         <p>Null Section Id.</p>
       </section>;
