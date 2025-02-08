@@ -78,8 +78,8 @@ export default function VoteSection() {
   return (
     <section>
       <h3>好きなサーバーの種類を選んで投票しよう！</h3>
-      <Button content="PvEサーバー" onClick={() => vote("pve")} />
-      <Button content="PvPサーバー" onClick={() => vote("pvp")} />
+      <Button content="PvEサーバー" onClick={async () => await vote("pve")} />
+      <Button content="PvPサーバー" onClick={async () => await vote("pvp")} />
       <p>現在の投票結果：</p>
       <div id="result">
         <p>PvPサーバー: <span id="pvp-result">{voteCounts.pvp}</span>票</p>
