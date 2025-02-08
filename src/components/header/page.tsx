@@ -1,5 +1,3 @@
-import "./globals.css";
-
 export default function Header({id}:{id?:string}) {
     if (id=="vote") {
         return <header>

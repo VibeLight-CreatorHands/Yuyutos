@@ -1,7 +1,6 @@
 'use client'
 import { useState, useEffect } from 'react';
 import Bubble from "../Bubble/page";
-import "./globals.css";
 import Button from "@/components/Button/page";
 import { initializeApp } from "firebase/app";
 import { getDatabase, ref, get, update, onValue } from "firebase/database";
