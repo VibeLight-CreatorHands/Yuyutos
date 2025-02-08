@@ -3,7 +3,7 @@ import Button from "@/components/Button/page";
 
 
 export default function About() {
-  const toggleBubble = (bubbleId: string) => {
+  function toggleBubble(bubbleId: string) {
     const bubble = document.getElementById(bubbleId);
     if (bubble) {
       bubble.classList.toggle("hide");

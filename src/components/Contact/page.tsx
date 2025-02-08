@@ -2,7 +2,7 @@ import Button from "@/components/Button/page";
 import Bubble from "@/components/Bubble/page";
 
 export default function Contact() {
-    const toggleBubble = (bubbleId: string) => {
+    function toggleBubble(bubbleId: string) {
         const bubble = document.getElementById(bubbleId);
         if (bubble) {
           bubble.classList.toggle("hide");
