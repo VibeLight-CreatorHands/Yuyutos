@@ -2,6 +2,8 @@
   "name": "yuyutos",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
+  "homepage": "https://vibelight-creatorhands.github.io/Yuyutos/",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
