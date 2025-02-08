@@ -1,6 +1,6 @@
+'use client'
 import Bubble from "@/components/Bubble/page";
 import Button from "@/components/Button/page";
-
 
 export default function About() {
   function toggleBubble(bubbleId: string) {

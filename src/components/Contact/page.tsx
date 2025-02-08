@@ -1,3 +1,4 @@
+'use client'
 import Button from "@/components/Button/page";
 import Bubble from "@/components/Bubble/page";
 
