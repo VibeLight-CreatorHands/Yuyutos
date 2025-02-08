@@ -1,0 +1,28 @@
+
+/* セクションのスタイル */
+section {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    max-width: 80%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: fadeIn 2s ease-out forwards;
+}
+
+/* メディアクエリ：モバイル用 */
+@media (max-width: 768px) {
+    section {
+        width: 100%;
+        padding: 15px;
+    }
+}
+
+/* メディアクエリ：小型デバイス用（スマホ） */
+@media (max-width: 480px) {
+    section {
+        width: 100%;
+        padding: 10px;
+    }
+}

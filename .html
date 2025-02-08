@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>    
+    <!-- ✅ Firebase SDKの読み込み -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.0/firebase-app.js";
+        import { getDatabase } from "https://www.gstatic.com/firebasejs/11.3.0/firebase-database.js";
+        import { getAuth, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/11.3.0/firebase-auth.js";
+    </script>
+</head>
+<body>
+    <header>
+        <h1>投票システム</h1>
+    </header>
+
+    <section id="vote-section">
+        <h3>好きなサーバーの種類を選んで投票しよう！</h3>
+        <button class="vote-btn" id="vote-pvp">PvPサーバー</button>
+        <button class="vote-btn" id="vote-pve">PvEサーバー</button>
+        <p>現在の投票結果：</p>
+        <div id="result">
+            <p>PvPサーバー: <span id="pvp-result">0</span>票</p>
+            <p>PVEサーバー: <span id="pve-result">0</span>票</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 NewDimWorlds</p>
+    </footer>
+
+    <!-- ✅ Firebase SDK のスクリプトを読み込む -->
+    <script src="https://www.gstatic.com/firebasejs/11.3.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.3.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.3.0/firebase-database.js"></script>
+
+    <!-- ✅ jQueryの読み込み -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- ✅ 修正したvote.jsを読み込み -->
+    <script type="module" src="js/vote.js"></script>
+</body>
+</html>
