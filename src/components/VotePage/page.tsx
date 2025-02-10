@@ -1,9 +1,14 @@
-'use client'
-import { useState, useEffect } from 'react';
+"use client";
+import { useState, useEffect } from "react";
 import Button from "@/components/Button/page";
 import { initializeApp } from "firebase/app";
 import { getDatabase, ref, get, update, onValue } from "firebase/database";
-import { getAuth, signInWithPopup, GoogleAuthProvider, User } from "firebase/auth";
+import {
+  getAuth,
+  signInWithPopup,
+  GoogleAuthProvider,
+  User,
+} from "firebase/auth";
 
 // Firebaseの設定（.envファイルに分離推奨）
 const firebaseConfig = {
@@ -14,7 +19,7 @@ const firebaseConfig = {
   storageBucket: "ndw-backends.firebasestorage.app",
   messagingSenderId: "902040083621",
   appId: "1:902040083621:web:8549414f6f406d4ee5c14c",
-  measurementId: "G-6QTLFNHJ8X"
+  measurementId: "G-6QTLFNHJ8X",
 };
 
 const app = initializeApp(firebaseConfig);
@@ -44,7 +49,7 @@ export default function VoteSection() {
     });
 
     return () => {
-      loginButton.removeEventListener('click', () => {});
+      loginButton.removeEventListener("click", () => {});
       loginButton.remove();
     };
   }, []);
@@ -82,8 +87,12 @@ export default function VoteSection() {
       <Button content="PvPサーバー" onClick={() => vote("pvp")} />
       <p>現在の投票結果：</p>
       <div id="result">
-        <p>PvPサーバー: <span id="pvp-result">{voteCounts.pvp}</span>票</p>
-        <p>PVEサーバー: <span id="pve-result">{voteCounts.pve}</span>票</p>
+        <p>
+          PvPサーバー: <span id="pvp-result">{voteCounts.pvp}</span>票
+        </p>
+        <p>
+          PVEサーバー: <span id="pve-result">{voteCounts.pve}</span>票
+        </p>
       </div>
     </section>
   );

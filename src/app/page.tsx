@@ -6,12 +6,14 @@ import Contact from "@/components/Contact/page";
 import Vote from "@/components/Vote/page";
 
 export default function HomePage() {
-  return <div className="flex flex-wrap gap-4 items-center">
-    <Header />
-    <About />
-    <Features />
-    <Contact />
-    <Vote />
-    <Footer />
-  </div>
+  return (
+    <div className="flex flex-wrap gap-4 items-center">
+      <Header />
+      <About />
+      <Features />
+      <Contact />
+      <Vote />
+      <Footer />
+    </div>
+  );
 }
